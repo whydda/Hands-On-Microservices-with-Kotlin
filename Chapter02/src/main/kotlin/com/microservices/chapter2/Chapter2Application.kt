@@ -28,7 +28,7 @@ class FirstController {
   @Autowired
   lateinit var service: ServiceInterface
 
-  @RequestMapping(value = "/user/{name}", method = arrayOf(RequestMethod.GET))
+  @RequestMapping(value = arrayOf("/user/{name}"), method = arrayOf(RequestMethod.GET))
   @ResponseBody
   fun hello(@PathVariable name: String) = service.getHello(name)
 }
